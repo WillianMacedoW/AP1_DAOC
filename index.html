@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FakeStore SPA • Vanilla JS</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header id="app-header"></header>
+
+    <main class="container">
+      <section id="toolbar" class="toolbar">
+        <input id="search-input" type="search" placeholder="Buscar por nome..." />
+        <select id="category-select">
+          <option value="">Todas as categorias</option>
+        </select>
+        <select id="rating-select" title="Filtrar por avaliação mínima">
+          <option value="">Avaliação (todas)</option>
+          <option value="1">★+ 1</option>
+          <option value="2">★+ 2</option>
+          <option value="3">★+ 3</option>
+          <option value="4">★+ 4</option>
+        </select>
+        <div class="price-range">
+          <label>Preço:</label>
+          <input id="min-price" type="number" min="0" step="0.01" placeholder="mín" />
+          <span>—</span>
+          <input id="max-price" type="number" min="0" step="0.01" placeholder="máx" />
+        </div>
+        <button id="clear-filters" class="secondary">Limpar filtros</button>
+        <button id="theme-toggle" class="ghost" title="Alternar tema">🌓</button>
+      </section>
+
+      <section id="view-products" class="view active">
+        <div id="products-grid" class="grid"></div>
+        <div id="products-empty" class="empty hidden">Nenhum produto encontrado.</div>
+      </section>
+
+      <section id="view-favorites" class="view">
+        <div id="favorites-grid" class="grid"></div>
+        <div id="favorites-empty" class="empty">Você ainda não favoritou nenhum item.</div>
+      </section>
+
+      <div id="loader" class="loader hidden" aria-live="polite" aria-busy="true">
+        <div class="spinner"></div>
+        <span>Carregando…</span>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <small>Dados: <a href="https://fakestoreapi.com/" target="_blank" rel="noreferrer">Fake Store API</a> • Vanilla JS + ES Modules</small>
+    </footer>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
