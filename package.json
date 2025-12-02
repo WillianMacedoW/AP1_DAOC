@@ -1,0 +1,12 @@
+{
+  "name": "ap1_daoc",
+  "version": "1.0.0",
+  "description": "SPA React com catálogo, carrinho, cadastro e edição usando Fake Store API.",
+  "type": "module",
+  "scripts": {
+    "start": "python -m http.server 4173"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
