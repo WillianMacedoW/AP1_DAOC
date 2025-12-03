@@ -36,20 +36,17 @@ header.site-header {
   transform: scale(1.05);
 }
 .fav-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  background: transparent;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: white;
   color: var(--danger);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
+  transition: all 0.2s ease;
 }
 .fav-btn:hover {
-  transform: scale(1.08);
+  transform: scale(1.2);
 }
 
 * { box-sizing: border-box; }
@@ -199,11 +196,13 @@ button.ghost {
 .card .actions {
   display: flex; gap: 8px; margin-top: auto; justify-content: space-between; align-items: center;
 }
-.fav-btn.active {
-  background: var(--danger);
-  color: #fff;
-  border-color: transparent;
+.fav-btn {
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--fg);
 }
+.fav-btn.active { background: var(--danger); color: #fff; border-color: transparent; }
 
 .view { display: none; }
 .view.active { display: block; }
